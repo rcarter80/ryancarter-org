@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Electronics</title>
+  <meta name="description" content="Composer of music for instruments, voices, and computers.">
+  <meta name="author" content="Ryan Carter">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./assets/css/styles.css" rel="stylesheet" media="screen">
+  <link rel="icon" type="image/png" href="./favicon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <div id="header_wrapper">
+    <div id="header_container">
+      <div id="header">
+        <h1>RYAN CARTER : composer</h1>
+      </div>
+      <div id="navigation_disclosure"><a href="#" class="preventDefault">[ + ]</a></div> <!-- only displays on phone -->
+      <div id="nav">
+        <ul>
+          <li><a href="./index.html">about</a></li>
+          <li><a href="./listen.html">listen</a></li>
+          <li><a href="./works.html">works</a></li>
+          <li><a href="./events.html">events</a></li>
+          <li><a href="./press.html">press</a></li>
+          <li><a href="./contact.html">contact</a></li>
+          <li><a href="./electronics.html" class="disabled preventDefault">electronics</a></li>
+        </ul>
+      </div> <!-- /#nav -->
+    </div> <!-- /#header_container -->
+  </div> <!-- /#header_wrapper -->
+
+  <div id="main_wrapper">
+    <div id="main_container">
+      <div id="banner"><h2>ELECTRONICS</h2></div>
+
+      <div class="section electronics">
+        <h3>iMonkeypants</h3>
+        <p>iMonkeypants is an album of algorithmically generated, listener-interactive electronica in the form of an iPhone app. The music responds in real time to the position of the device, giving the listener control over certain aspects of the sound while it plays. iMonkeypants is now available for <a href="http://itunes.apple.com/us/app/imonkeypants/id547532522?mt=8" target="_blank">download from the App Store</a>.</p>
+        <p>For questions, comments, and support, email: iMonkeypants (at) ryancarter (dot) org</p>
+
+        <div class="demo_video">
+          <p class="center">Watch the iMonkeypants video:</p>
+          <iframe src="http://www.youtube.com/embed/7sQq3llBDKg" allowfullscreen></iframe>
+          <a href="http://itunes.apple.com/us/app/imonkeypants/id547532522?mt=8" target="_blank" class="clearfix"><img src="./assets/img/app_store_badge.png" class="app_store_badge" alt="App Store badge"></a>
+        </div>
+
+        <div class="faq">
+          <h4>More Information</h4>
+          <!-- one question -->
+          <a class="faqQuestion preventDefault" href="#"><span class="faqTriangle">&#9658; </span>How does it work?</a>
+          <div class="faqAnswer">
+            <p>iMonkeypants is "algorithmically generated," meaning that it involves no pre-produced or pre-recorded sound files. Instead, all of the sounds are synthesized in real time from code written in a programming language called <a href="http://rtcmix.org/">RTcmix</a>. This allows me to incorporate data from the accelerometer of the device into the code, allowing the listener to control aspects of the sound as it is generated. Tipping the device from one position to another may, for example, raise the pitch of one musical layer while changing the volume of another and transforming the "color" of a third.</p>
+            <a class="faqClose preventDefault" href="#">[ close all ]</a>
+          </div> <!-- end question -->
+          <!-- one question -->
+          <a class="faqQuestion preventDefault" href="#"><span class="faqTriangle">&#9658; </span>Why isn't background audio supported?</a>
+          <div class="faqAnswer">
+            <p>Because control over the sound depends on the position of the device and because any unique position will result in a unique sound, the screen may often be pointed away from the listener. (This is the same reason the app doesn't involve interactive graphics.) The music is not really a background texture, but more of an immersive experience.</p>
+            <a class="faqClose preventDefault" href="#">[ close all ]</a>
+          </div> <!-- end question -->
+          <!-- one question -->
+          <a class="faqQuestion preventDefault" href="#"><span class="faqTriangle">&#9658; </span>Why is there no option for pausing, rewinding, or fast forwarding?</a>
+          <div class="faqAnswer">
+            <p>Because of how RTcmix works, the rate at which the music unfolds is determined immediately after the play button is pressed, so the music can't be accelerated or rewound. If there's enough demand, I may add the option to skip to the next section or loop the current section of a track. (Each track is actually split into several source files, and it would be possible to skip from one to another.)</p>
+            <a class="faqClose preventDefault" href="#">[ close all ]</a>
+          </div> <!-- end question -->
+          <!-- one question -->
+          <a class="faqQuestion preventDefault" href="#"><span class="faqTriangle">&#9658; </span>Why are headphones recommended?</a>
+          <div class="faqAnswer">
+            <p>One of the primary forms of interactivity is spatial (i.e., whether sounds are in the right ear, left ear, or somewhere between). Rotating the device can create the sense of sounds moving around the listener's head, but this effect is lost when listening to the music through the internal speakers of the device. The last track on the album, in particular, doesn't work well without headphones or external speakers.</p>
+            <a class="faqClose preventDefault" href="#">[ close all ]</a>
+          </div> <!-- end question -->
+          <!-- one question -->
+          <a class="faqQuestion preventDefault" href="#"><span class="faqTriangle">&#9658; </span>What's the deal with the app icon?</a>
+          <div class="faqAnswer">
+            <p>The icon is a stylized "fermata" (a musical indication to hold a note). Because you're literally "holding" the music.</p>
+            <a class="faqClose preventDefault" href="#">[ close all ]</a>
+          </div> <!-- end question -->
+        </div> <!-- /.faq -->
+      </div> <!-- /.section -->
+
+      <div class="section electronics">
+        <h3>Headless Monkey Attack</h3>
+        <p>Headless Monkey Attack is a live electronic performance project using the same programming language as iMonkeypants in conjunction with a video game controller.</p>
+        <p>Recordings, source code, and additional information can be found on the <a href="http://www.headlessmonkeyattack.com" target="_blank">official Headless Monkey Attack site</a>.</p>
+      </div> <!-- /.section -->
+
+      <div id="tiny_phone_nav"> <!-- phone only: in case hidden nav is inaccessible -->
+        <hr>
+        <ul>
+          <li><a href="./index.html">about</a></li>
+          <li><a href="./listen.html">listen</a></li>
+          <li><a href="./works.html">works</a></li>
+          <li><a href="./events.html">events</a></li>
+          <li><a href="./press.html">press</a></li>
+          <li><a href="./contact.html">contact</a></li>
+          <li><a href="./electronics.html" class="disabled preventDefault">electronics</a></li>
+        </ul>
+      </div> <!-- /#tiny_phone_navnav -->
+
+      <hr>
+      <div class="copyright">
+        <p>&copy; Ryan Carter 2013</p>
+      </div> <!-- /.copyright -->
+
+    </div> <!-- /#main-container -->
+  </div> <!-- /#main_wrapper -->
+
+  <div class="backToTop">
+    <a href="#" class="preventDefault scrollToTop">&uarr;</a>
+  </div> <!-- /.backToTop -->
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+
+  <!-- local copy of jQuery -->
+  <!-- <script src="./jQuery/jquery-1.10.1.js"></script> -->
+
+  <script src="./assets/js/scripts.js"></script>
+
+</body>
+</html>

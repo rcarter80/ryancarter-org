@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Additional information</title>
+  <meta name="description" content="Composer of music for instruments, voices, and computers.">
+  <meta name="author" content="Ryan Carter">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./assets/css/styles.css" rel="stylesheet" media="screen">
+  <link rel="icon" type="image/png" href="./favicon.ico">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <div id="header_wrapper">
+    <div id="header_container">
+      <div id="header">
+        <h1>RYAN CARTER : composer</h1>
+      </div>
+      <div id="navigation_disclosure"><a href="#" class="preventDefault">[ + ]</a></div> <!-- only displays on phone -->
+      <div id="nav">
+        <ul>
+          <li><a href="./index.html">about</a></li>
+          <li><a href="./listen.html">listen</a></li>
+          <li><a href="./works.html">works</a></li>
+          <li><a href="./events.html">events</a></li>
+          <li><a href="./press.html">press</a></li>
+          <li><a href="./contact.html">contact</a></li>
+          <li><a href="./electronics.html">electronics</a></li>
+        </ul>
+      </div> <!-- /#nav -->
+    </div> <!-- /#header_container -->
+  </div> <!-- /#header_wrapper -->
+
+  <div id="main_wrapper">
+    <div id="main_container">
+      <!-- <div id="banner"><h2>Information for On the expressive potential...</h2></div> -->
+
+      <div class="portfolio section clearfix">
+        <h3>On the expressive potential of suboptimal speakers</h3>
+        <div class="score_link"> <!-- no score. link navigates to project site -->
+          <a href="http://www.ryancarter.org/suboptimal" target="_blank"><div class="score_thumbnail" id="score_suboptimal"><p>VISIT SITE</p></div></a>
+        </div>
+        <div class="score_info">
+          <p><i>On the expressive potential of suboptimal speakers</i> (for audience participation with mobile devices) is a web-based work for motion-controlled interactive electronics.</p>
+          <p>I've been expanding on this project, most recently at the Los Angeles Philharmonic's <a href="https://www.hackmusicla.com" target="_blank">Hack Music LA</a> in October. I'm happy to report that my team, BounceWav, won the LA Phil Prize and will be collaborating with the orchestra during the 2018/19 season. As this is a recent development, the details are still being discussed, but the initial proposal from the organization is to create a work for the LA Phil with massive audience participation at the Hollywood Bowl.</p>
+          <p>I have also been speaking with the JACK Quartet about a future collaboration with audience participation on mobile devices. If possible, I would like to amend my Statement of Plans to include these two projects.</p>
+          <p class="light">Duration: 7:16</p>
+          <p class="very_dark">This recording is a simulation of the work performed on several devices. You can participate by visiting <a href="http://www.ryancarter.org/suboptimal" target="_blank">ryancarter.org/suboptimal</a> on a mobile device and playing along with the simulation.</p>
+          <br>
+          <audio controls="controls">
+            <!-- listing ogg first didn't work in Safari -->
+            <source src="audio/suboptimal-simulation.mp3">
+              <source src="audio/suboptimal-simulation.ogg">
+                <!-- error message for old browsers -->
+                <p style="color:red;">Your browser does not support HTML5 audio. Upgrading your browser will give you access to many new features. In the meantime, click here to download <a href="audio/suboptimal-simulation.mp3" target="_blank" style="display:inline;font-size:100%;">dolorem ipsum</a></p>
+          </audio>
+        </div> <!-- /.score_info -->
+      </div> <!-- /.section -->
+
+      <div class="section">
+        <p>This page can only be accessed by navigating directly to <a href="http://www.ryancarter.org/info-for-suboptimal.html">ryancarter.org/info-for-suboptimal</a></p>
+      </div> <!-- /.section -->
+
+      <div id="tiny_phone_nav"> <!-- phone only: in case hidden nav is inaccessible -->
+        <hr>
+        <ul>
+          <li><a href="./index.html">about</a></li>
+          <li><a href="./listen.html">listen</a></li>
+          <li><a href="./works.html">works</a></li>
+          <li><a href="./events.html">events</a></li>
+          <li><a href="./press.html">press</a></li>
+          <li><a href="./contact.html">contact</a></li>
+          <li><a href="./electronics.html">electronics</a></li>
+        </ul>
+      </div> <!-- /#tiny_phone_nav -->
+
+      <hr>
+      <div class="copyright">
+        <p>&copy; Ryan Carter 2017</p>
+      </div> <!-- /.copyright -->
+
+    </div> <!-- /#main-container -->
+  </div> <!-- /#main_wrapper -->
+
+  <div class="backToTop">
+    <a href="#" class="preventDefault scrollToTop">&uarr;</a>
+  </div> <!-- /.backTtoTop -->
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+
+  <script type="text/javascript">
+  // Make all links load in new windows because this page is orphaned and user won't want to lose this tab
+  $("a").attr("target", "_blank");
+  </script>
+
+  <!-- local copy of jQuery -->
+  <!-- <script src="./jQuery/jquery-1.10.1.js"></script> -->
+
+  <script src="./assets/js/scripts.js"></script>
+
+</body>
+</html>
