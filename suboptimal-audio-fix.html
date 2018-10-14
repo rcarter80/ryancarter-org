@@ -13,7 +13,7 @@
   <script src="./TMassets/js/StartAudioContext.js"></script>
   <!-- place ToneMotion.js at top and ToneMotionInterface.js at bottom of page -->
   <script src="./TMassets/js/ToneMotion.js"></script>
-  
+
   <link rel="stylesheet" type="text/css" href="./TMassets/css/TMstyles.css">
 
 </head>
@@ -30,7 +30,7 @@
     <div class="displayToggle"> <!-- "more information" -->
       <a href="#" class="preventDefault"><span class="disclosureTriangle">&#9658; </span>More Information</a>
     </div>
-    <div class="hiddenContent"> 
+    <div class="hiddenContent">
       <p class="moreInfoQuestion">Does my device require any special setup?</p>
       <p class="moreInfoAnswer">Once the page has loaded, you can set your device to Airplane Mode (to prevent phone calls and text messages during the performance) and you can set the Orientation Lock (so that the interface doesn't keep spinning as you move your device around). On an iOS device, you can access these settings from the Control Center by swiping up from the bottom of the screen.<br>You can also turn the volume up, and you might choose to turn down the screen brightness. No other setup is required.<br><br>TL;DR</p>
       <img src="./TMassets/img/volume-setting.png" alt="device-volume-up">
@@ -43,7 +43,7 @@
     <div class="displayToggle"> <!-- "test tone" -->
       <a href="#" class="preventDefault"><span class="disclosureTriangle">&#9658; </span>Test tone</a>
     </div>
-    <div id="TestToneLabel" class="hiddenContent"> 
+    <div id="TestToneLabel" class="hiddenContent">
       <p>The button below will produce a filtered sawtooth wave (a buzzy sound) with the oscillator frequency controlled on the x-axis and filter cutoff frequency controlled on the y-axis. (When you tilt your device to the left, the sound will be lower; when you tip your device upside down, the sound will be more buzzy.)</p>
       <button id="TestToneButton" class="soundOff">test</button>
     </div>
@@ -70,7 +70,7 @@
   </div> <!-- /#ControlWrapper -->
 
   <!-- hidden <audio> element coerces iOS into playing audio when ring/silent switch is on silent-->
-  <audio style="display:none;"><source src="./TMassets/audio/silent-buffer-to-set-audio-session.mp3"></audio>
+  <audio controls><source src="./TMassets/audio/silent-buffer-to-set-audio-session.mp3"></audio>
 </div> <!-- /#Content -->
 
 
@@ -99,7 +99,7 @@ ToneMotion.updateInterval = 0.05;
 ToneMotion.delayBeforePlaying = "+0.3";
 ToneMotion.deviceShouldSelfCalibrate = false;
 ToneMotion.print = false;
-// sets lookAhead. "interactive": lookAhead = 0.1; "playback": 0.8; "balanced": 0.25; "fastest": 0.01; 
+// sets lookAhead. "interactive": lookAhead = 0.1; "playback": 0.8; "balanced": 0.25; "fastest": 0.01;
 Tone.context.latencyHint = ToneMotion.updateInterval / 2.0;
 
 /******************************************************************
@@ -119,7 +119,7 @@ TMScore.setCue(1);
 ****************************** CUE 1 ******************************
 *******************************************************************/
 // this sure is ugly! advances to next cue at current transport time. uses Tone.Draw for properly timed callback
-Tone.Transport.schedule(function(time){ Tone.Draw.schedule(function(){ 
+Tone.Transport.schedule(function(time){ Tone.Draw.schedule(function(){
   TMScore.nextCue();
   setInstructions("Section 1: Explore the sound by tilting your device side to side.\
     Some sounds are shiny, some are crunchy, some are crackly. Tipping your device upside bends the pitch upward.\
@@ -173,14 +173,14 @@ TMScore.st += TMScore.durForCue[1]; // duration of each section set by SCORE MAP
 /******************************************************************
 ****************************** CUE 2 ******************************
 *******************************************************************/
-Tone.Transport.schedule(function(time) { Tone.Draw.schedule(function() { 
+Tone.Transport.schedule(function(time) { Tone.Draw.schedule(function() {
   TMScore.nextCue();
   $("#ChimeButtonCenter").append("<button id='c2-button1'>play a chime</button>"); // add chimes button for this cue
   $("#c2-button1").click(function() { chimeButtonClicked(1); });
   setInstructions("Section 2: Move your device around to explore the crackly sounds; some positions are extra crackly and some are silent. The button plays a chime, and tipping your phone bends the pitch just a little bit.");
 }, time) }, TMScore.st);
 // Instructions for loud clave sound when phone is upside down and section is half over
-Tone.Transport.schedule(function(time) { Tone.Draw.schedule(function() { 
+Tone.Transport.schedule(function(time) { Tone.Draw.schedule(function() {
   setInstructions("Try tipping your device upside down.");
 }, time) }, TMScore.st + TMScore.durForCue[2]/2);
 
@@ -387,7 +387,7 @@ TMScore.st += TMScore.durForCue[2];
 ****************************** CUE 3 ******************************
 *******************************************************************/
 Tone.Transport.schedule(function(time){ Tone.Draw.schedule(function(){
-  TMScore.nextCue(); 
+  TMScore.nextCue();
   setInstructions("Section 3: Bend the low chime sounds by tilting your device side to side.\
     Tipping your device upside down will cause the sound to flutter. There are crunchy sounds when your\
     device is tilted to the left.");
@@ -544,7 +544,7 @@ TMScore.st += TMScore.durForCue[3];
 ****************************** CUE 4 ******************************
 *******************************************************************/
 Tone.Transport.schedule(function(time){ Tone.Draw.schedule(function(){
-  TMScore.nextCue(); 
+  TMScore.nextCue();
   setInstructions("Section 4: The button plays chime sounds. Tilting your device bends the pitch.\
     The chimes play backwards if your device is upside down.");
   // make sure previous chime buttons are removed. They might not be because of screenlock or some other reason
@@ -631,7 +631,7 @@ Tone.Transport.schedule(function(time){ Tone.Draw.schedule(function(){
 ****************************** CUE 5 ******************************
 *******************************************************************/
 Tone.Transport.schedule(function(time){ Tone.Draw.schedule(function(){
-  TMScore.nextCue(); 
+  TMScore.nextCue();
   setInstructions("Section 5: Lots of sounds to explore.");
 }, time) }, TMScore.st);
 
@@ -664,8 +664,8 @@ var c5_fadeTime = 1/8; // i.e., c5_fadeOut takes place during the last 1/x durat
 function updateSoundsInCue5() {
   if (ToneMotion.print) console.log("updating cue 5 sounds");
 
-  timeElapsedInCue5 = 
-  Tone.Transport.seconds - 
+  timeElapsedInCue5 =
+  Tone.Transport.seconds -
   (TMScore.durForCue[1] + TMScore.durForCue[2] + TMScore.durForCue[3] + TMScore.durForCue[4]);
   if (timeElapsedInCue5 > (TMScore.durForCue[5] * 0.67)) { // only 1/3 of section remains
     // c5_offsetCounter counts from 1.0 to 0.0 during final 1/3 of cue 5
