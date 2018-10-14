@@ -99,24 +99,9 @@ let audioElem = document.getElementById("setAudioSession");
 let playButton = document.getElementById("TransportButton");
 
 playButton.addEventListener("click", handlePlayButton, false);
-playVideo();
-
-async function playVideo() {
-  try {
-    await videoElem.play();
-    playButton.className = "playing";
-  } catch(err) {
-    playButton.className = "";
-  }
-}
 
 function handlePlayButton() {
-  if (videoElem.paused) {
-    playVideo();
-  } else {
-    videoElem.pause();
-    playButton.className = "";
-  }
+  audioElem.play();
 }
 
 /******************************************************************
