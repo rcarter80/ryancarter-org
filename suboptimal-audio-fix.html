@@ -70,7 +70,8 @@
   </div> <!-- /#ControlWrapper -->
 
   <!-- hidden <audio> element coerces iOS into playing audio when ring/silent switch is on silent-->
-  <audio controls autoplay><source src="./TMassets/audio/silent-buffer-to-set-audio-session.mp3"></audio>
+  <p>test that content is updated</p>
+  <audio controls id="setAudioSession"><source src="./TMassets/audio/silent-buffer-to-set-audio-session.mp3"></audio>
 </div> <!-- /#Content -->
 
 
@@ -90,6 +91,33 @@
 ** print (whether to print status messages to console): false
 ** shutdown(): removes event listeners and clears intervals
 */
+
+// TODO: clean this up. finding <audio> shim workaround inspired by:
+// https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play
+let audioElem = document.getElementById("setAudioSession");
+// TODO: if this works, use for test tone too
+let playButton = document.getElementById("TransportButton");
+
+playButton.addEventListener("click", handlePlayButton, false);
+playVideo();
+
+async function playVideo() {
+  try {
+    await videoElem.play();
+    playButton.className = "playing";
+  } catch(err) {
+    playButton.className = "";
+  }
+}
+
+function handlePlayButton() {
+  if (videoElem.paused) {
+    playVideo();
+  } else {
+    videoElem.pause();
+    playButton.className = "";
+  }
+}
 
 /******************************************************************
 ************************* GENERAL PARAMETERS **********************
