@@ -17,7 +17,7 @@
   }
 
   /* apply a natural box layout model to all elements (suggestion from Paul Irish) */
-  *, *:before, *:after { 
+  *, *:before, *:after {
     -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
   }
 
@@ -27,7 +27,7 @@
     background-color: #eee;
     background-image: url("../img/manuscript_background.png");
     color: #6a6f6d;
-    font-size: 87%; 
+    font-size: 87%;
     font-family: 'Open Sans', Arial, sans-serif;
     line-height: 1.5;
   }
@@ -143,7 +143,7 @@
   }
 
   ::-moz-selection {  background: #FFDD80; color: inherit; }
-  ::selection      {  background: #FFDD80; color: inherit; } 
+  ::selection      {  background: #FFDD80; color: inherit; }
 
   small {
     font-size: 85%;
@@ -665,7 +665,7 @@
   #mc_embed_signup .button { display: inline-block;clear:both; margin-bottom: 10px; padding:0; width: auto; height: 32px; border: 0 none; border-radius:4px; background-color: #b2b7b6; color: #FFFFFF; vertical-align: top; text-align: center; text-decoration: none; white-space: nowrap; font-weight: bold; font-size:15px; line-height: 32px; cursor: pointer;}
   #mc_embed_signup .button:hover {background-color:#8a8f8d;}
   #mc_embed_signup .small-meta {font-size: 11px;}
-  #mc_embed_signup .nowrap {white-space:nowrap;}     
+  #mc_embed_signup .nowrap {white-space:nowrap;}
   #mc_embed_signup .clear { display:inline;clear:none;}
 
   #mc_embed_signup label {display:block; padding-bottom:10px; font-weight:bold; font-size:16px;}
@@ -881,7 +881,7 @@
       width: 560px;
     }
     .demo_video > iframe {
-      width: 560px; 
+      width: 560px;
       height: 315px;
       border: none;
     }
@@ -892,7 +892,7 @@
       width: 420px;
     }
     .demo_video > iframe {
-      width: 420px; 
+      width: 420px;
       height: 315px;
       border: none;
     }
@@ -982,7 +982,7 @@
     background: url("../img/limits-thumbnail_hover.png");
   }
   #score_suboptimal {
-    background: url("../img/hand_tilt-still.gif");
+    background: url("../img/hand_tilt-hack.gif");
     background-size: cover;
   }
   #score_suboptimal:hover {
