@@ -7,7 +7,7 @@
 ** see: https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins
 */
 
-/*
+/* 
 ** CREATE GLOBAL OBJECT FOR MOTION DATA: ToneMotion
 */
 // instantiate Tone.Signal objects to connect to Tone.js sounds
@@ -37,16 +37,10 @@ var ToneMotion = {
 ** TEST IF DEVICE REPORTS MOTION. If not, XY-pad will be added by interface.
 */
 if ('DeviceMotionEvent' in window) {
-  // TODO: remove this test alert, which is for easy mobile testing
-  window.alert("DeviceMotionEvent in window is true");
-
   window.addEventListener("devicemotion", handleMotionEvent, true);
   // But wait! My laptop sometimes says it reports motion but doesn't. Check for that case below.
-}
+} 
 else {
-  // TODO: remove this test alert, which is for easy mobile testing
-  window.alert("DeviceMotionEvent in window is false");
-
   ToneMotion.status = "deviceDoesNotReportMotion";
 }
 // If motion data doesn't change, either the device doesn't report motion or it's perfectly level
@@ -68,7 +62,7 @@ var testForMotion = (function() {
     if ( (ToneMotion.x > loThreshold && ToneMotion.x < hiThreshold) && (ToneMotion.y > loThreshold & ToneMotion.y < hiThreshold) ) {
       // no motion detected. check if motionFailCount is exceeded and increment counter.
       if (ToneMotion.print) { console.log("No device motion detected. motionFailCount: " + counter); }
-      if (counter > motionFailCount || ToneMotion.status === "deviceDoesNotReportMotion") {
+      if (counter > motionFailCount || ToneMotion.status === "deviceDoesNotReportMotion") { 
         // Either the device isn't moving or it will not report motion
         ToneMotion.status = "deviceDoesNotReportMotion";
         window.removeEventListener("devicemotion", handleMotionEvent, true); // stops listening for motion
@@ -170,7 +164,7 @@ function handleMotionEvent(event) {
   else {
     accelRange.tempX = accelRange.rawX;
   }
-  if (accelRange.rawY < accelRange.loY) {
+  if (accelRange.rawY < accelRange.loY) { 
     accelRange.tempY = accelRange.loY;
   }
   else if (accelRange.rawY > accelRange.hiY) {
@@ -280,8 +274,8 @@ function updateInteractiveSounds() {
 ** different sections may have different interactive sounds. manage with cuelist
 */
 var TMScore = {
-  // ugh this is ugly. switch statement in updateInteractiveSounds() has one hard-coded case
-  // for each of these 20 cues. no risk of triggering cue that doesn't exist but changing
+  // ugh this is ugly. switch statement in updateInteractiveSounds() has one hard-coded case 
+  // for each of these 20 cues. no risk of triggering cue that doesn't exist but changing 
   // MAX_CUES must also involve modifying switch statement in updateInteractiveSounds()
   MAX_CUES: 20, // this should be a constant
   currentCue: 0,
@@ -309,7 +303,7 @@ var TMScore = {
   },
   st: 0, // current transport time to be incremented throughout score
   nextCue: function() {
-    if (this.currentCue == this.MAX_CUES) {
+    if (this.currentCue == this.MAX_CUES) { 
       console.log("Cue list already at maximum value of " + this.MAX_CUES);
     }
     else {
