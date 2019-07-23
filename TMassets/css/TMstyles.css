@@ -15,7 +15,7 @@ html {
 }
 
 /* apply a natural box layout model to all elements (suggestion from Paul Irish) */
-*, *:before, *:after {
+*, *:before, *:after { 
   -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
 }
 
@@ -24,7 +24,7 @@ body {
   padding: 0;
   background-color: #2e3a3a;
   color: #9df9f9;
-  font-size: 87%;
+  font-size: 87%; 
   font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1.5;
 }
@@ -256,7 +256,7 @@ div.chimeButtonColumn {
   display: inline-block;
   float: left;
 }
-/* OK, this kind of a kludge -
+/* OK, this kind of a kludge - 
 The three buttons need equal columns, but an empty div#ChimeButtonLeft column has no width, so it needs content
 I put a tiny &nbsp; and that means that the center column is always in the center even if left column is empty
 MUST prepend left chime button to p#ButtonPlaceholder */
@@ -381,3 +381,4 @@ button#ConfirmStop:hover {
   height: 98%; /* fallback for browsers without support for calc() */
   height: calc(100% - 6px);
 }
+
