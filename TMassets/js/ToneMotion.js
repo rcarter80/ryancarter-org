@@ -69,19 +69,10 @@ var testForMotion = (function() {
       // no motion detected. check if motionFailCount is exceeded and increment counter.
       if (ToneMotion.print) { console.log("No device motion detected. motionFailCount: " + counter); }
       if (counter > motionFailCount || ToneMotion.status === "deviceDoesNotReportMotion") {
-        // Either the device isn't moving or it will not report motion OR
-        // motion access permission is off.
-        // Writing on 07/23/2019, I hope this will be fixed in the future
-        // I hope a dialog window will appear asking user permission for motion data access. Temporary workaround below. Not elegant.
-        if (window.confirm("No motion detected. Check permissions. Select 'Ok' to try again or 'Cancel' to launch desktop simulation.")) {
-          // user has opted to try again
-          testForMotion();
-        } else {
-          // user has opted for desktop simulator
-          ToneMotion.status = "deviceDoesNotReportMotion";
-          window.removeEventListener("devicemotion", handleMotionEvent, true); // stops listening for motion
-          clearInterval(motionCheckIntervId);
-        }
+        // Either the device isn't moving or it will not report motion
+        ToneMotion.status = "deviceDoesNotReportMotion";
+        window.removeEventListener("devicemotion", handleMotionEvent, true); // stops listening for motion
+        clearInterval(motionCheckIntervId);
       }
       return counter++;
     }
