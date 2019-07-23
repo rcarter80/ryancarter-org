@@ -75,7 +75,6 @@ var testForMotion = (function() {
         // I hope a dialog window will appear asking user permission for motion data access. Temporary workaround below. Not elegant.
         if (window.confirm("No motion detected. Check permissions. Select 'Ok' to try again or 'Cancel' to launch desktop simulation.")) {
           // user has opted to try again
-          counter = 1;
           testForMotion();
         } else {
           // user has opted for desktop simulator
