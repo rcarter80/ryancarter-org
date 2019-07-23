@@ -37,16 +37,10 @@ var ToneMotion = {
 ** TEST IF DEVICE REPORTS MOTION. If not, XY-pad will be added by interface.
 */
 if ('DeviceMotionEvent' in window) {
-  // TODO: remove this test alert, which is for easy mobile testing
-  window.alert("DeviceMotionEvent in window is true");
-
   window.addEventListener("devicemotion", handleMotionEvent, true);
   // But wait! My laptop sometimes says it reports motion but doesn't. Check for that case below.
 }
 else {
-  // TODO: remove this test alert, which is for easy mobile testing
-  window.alert("DeviceMotionEvent in window is false");
-
   ToneMotion.status = "deviceDoesNotReportMotion";
 }
 // If motion data doesn't change, either the device doesn't report motion or it's perfectly level
