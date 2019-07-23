@@ -136,10 +136,6 @@ else {
 
 // sets ToneMotion.x and .y by polling and normalizing motion data. called in response to "devicemotion"
 function handleMotionEvent(event) {
-  // TODO DELETE THIS BRANCH ENTIRELY?
-  // at least need to get rid of this awful alert, which is just to test whether Safari needs to reload page after motion access permissions have changed
-  window.alert('handleMotionEvent called');
-  
   // get the raw accelerometer values (invert if Android)
   if (ToneMotion.deviceIsAndroid) {
     accelRange.rawX = -(event.accelerationIncludingGravity.x);
