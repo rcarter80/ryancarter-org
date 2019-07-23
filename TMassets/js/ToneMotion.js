@@ -66,7 +66,7 @@ var testForMotion = (function() {
         // Either the device isn't moving or it will not report motion
 
         // TODO if Apple fixes this issue and show dialog window to ask permission, I can remove this. It appears page needs to reload after setting changes (as of 07/23/19)
-        window.alert("Your device is not reporting motion, but this may a result of your browser settings. If you're on an iPhone, go to Settings > Safari > Motion & Orientation Access and make sure this setting is on. Reload the page to try again, or continue to launch the desktop simulator.");
+        window.alert("Your device is not reporting motion. You may either be on a desktop computer, or this may be a result of your mobile browser settings. If you're on an iPhone, go to Settings > Safari > Motion & Orientation Access and make sure this setting is on. Reload the page to try again, or continue to launch the desktop version.");
 
         ToneMotion.status = "deviceDoesNotReportMotion";
         window.removeEventListener("devicemotion", handleMotionEvent, true); // stops listening for motion
