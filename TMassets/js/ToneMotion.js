@@ -36,13 +36,13 @@ var ToneMotion = {
 /*
 ** TEST IF DEVICE REPORTS MOTION. If not, XY-pad will be added by interface.
 */
-if ('DeviceMotionEvent' in window) {
-  window.addEventListener("devicemotion", handleMotionEvent, true);
-  // But wait! My laptop sometimes says it reports motion but doesn't. Check for that case below.
-}
-else {
-  ToneMotion.status = "deviceDoesNotReportMotion";
-}
+// if ('DeviceMotionEvent' in window) {
+//   window.addEventListener("devicemotion", handleMotionEvent, true);
+//   // But wait! My laptop sometimes says it reports motion but doesn't. Check for that case below.
+// }
+// else {
+//   ToneMotion.status = "deviceDoesNotReportMotion";
+// }
 // If motion data doesn't change, either the device doesn't report motion or it's perfectly level
 var motionCheckIntervId; // interval ID for checking motion detection
 var motionCheckDur = 3; // number of seconds before concluding there is no motion detection
@@ -64,8 +64,7 @@ var testForMotion = (function() {
       if (ToneMotion.print) { console.log("No device motion detected. motionFailCount: " + counter); }
       if (counter > motionFailCount || ToneMotion.status === "deviceDoesNotReportMotion") {
         // Either the device isn't moving or it will not report motion
-
-        // TODO if Apple fixes this issue and show dialog window to ask permission, I can remove this. It appears page needs to reload after setting changes (as of 07/23/19)
+        // iOS 12.2 requires permission for motion access but does not support permission API so user has to set manually
         window.alert("Your device is not reporting motion. You may either be on a desktop computer, or this may be a result of your mobile browser settings. If you're on an iPhone, go to Settings > Safari > Motion & Orientation Access and make sure this setting is on. Reload the page to try again, or continue to launch the desktop version.");
 
         ToneMotion.status = "deviceDoesNotReportMotion";
@@ -82,8 +81,6 @@ var testForMotion = (function() {
     }
   };
 }());
-// check for motion reporting even if browser says it responds to 'devicemotion' because that might be a lie
-window.onload = beginMotionDetection();
 
 /*
 ** NORMALIZE MOTION DATA FOR USE
