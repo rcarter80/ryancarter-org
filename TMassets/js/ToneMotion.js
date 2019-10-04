@@ -36,13 +36,6 @@ var ToneMotion = {
 /*
 ** TEST IF DEVICE REPORTS MOTION. If not, XY-pad will be added by interface.
 */
-// if ('DeviceMotionEvent' in window) {
-//   window.addEventListener("devicemotion", handleMotionEvent, true);
-//   // But wait! My laptop sometimes says it reports motion but doesn't. Check for that case below.
-// }
-// else {
-//   ToneMotion.status = "deviceDoesNotReportMotion";
-// }
 // If motion data doesn't change, either the device doesn't report motion or it's perfectly level
 var motionCheckIntervId; // interval ID for checking motion detection
 var motionCheckDur = 3; // number of seconds before concluding there is no motion detection
@@ -65,6 +58,8 @@ var testForMotion = (function() {
       if (counter > motionFailCount || ToneMotion.status === "deviceDoesNotReportMotion") {
         // Either the device isn't moving or it will not report motion
         // iOS 12.2 requires permission for motion access but does not support permission API so user has to set manually
+        // This scenario is pretty awkward because user has to go to settings and change them, then MUST reload page. This only happens on iOS devices from 12.2 up to before 13
+        // This also happens on Chrome on laptop because it claims to report device motion but does not actually do it.
         window.alert("Your device is not reporting motion. You may either be on a desktop computer, or this may be a result of your mobile browser settings. If you're on an iPhone, go to Settings > Safari > Motion & Orientation Access and make sure this setting is on. Reload the page to try again, or continue to launch the desktop version.");
 
         ToneMotion.status = "deviceDoesNotReportMotion";

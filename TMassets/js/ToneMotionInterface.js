@@ -84,13 +84,15 @@ Tone.Buffer.on('load', function(){
   }
 })
 TransportButton.onclick = function() {
-  //Testing
-  console.log('TransportButton clicked');
+  // On device that request motion access permission, must delay playing sound
+  var delayPlayingUntilPermission = false;
+
   // testing iOS 13 motion permission
   // Guard against reference erros by checking that DeviceMotionEvent is defined
   if (typeof DeviceMotionEvent !== 'undefined' &&
   typeof DeviceMotionEvent.requestPermission === 'function') {
     // Device requests motion permission (e.g., iOS 13+)
+    delayPlayingUntilPermission = true;
     DeviceMotionEvent.requestPermission()
     .then(permissionState => {
       if (permissionState === 'granted') {
@@ -99,6 +101,8 @@ TransportButton.onclick = function() {
         // user has not give permission for motion. Pretend device is laptop
         ToneMotion.status = "deviceDoesNotReportMotion";
       }
+      // NOW we can play sound
+      Tone.Transport.start(ToneMotion.delayBeforePlaying);
     })
     .catch(console.error);
   } else {
@@ -128,7 +132,10 @@ TransportButton.onclick = function() {
     // user sees accel. data as part of introductory instructions, but those are removed when play starts
     clearInterval(updateIntroStatusLabelIntervId);
     $("#IntroStatusLabel").remove();
-    Tone.Transport.start(ToneMotion.delayBeforePlaying); // configurable delay before starting Transport
+    if (!delayPlayingUntilPermission) {
+      // if device requests motion access permission, DON'T play sound yet
+      Tone.Transport.start(ToneMotion.delayBeforePlaying); // configurable delay before starting Transport
+    }
   }
   else if (TransportButton.className === "musicIsPlaying") {
     TransportButton.className = "userMayStopMusic";
