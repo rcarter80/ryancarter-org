@@ -40,11 +40,11 @@
       <p class="moreInfoQuestion">What if there's no data connection in the venue?</p>
       <p class="moreInfoAnswer">You can load the page outside the venue and it will continue to work (even in Airplane Mode). Make sure not to hit the refresh button.</p>
     </div>
-    <div class="displayToggle"> <!-- "test tone" -->
+        <!-- test tone currently broken, so hiding for now -->
+    <div class="displayToggle" style="display:none;"> <!-- "test tone" -->
       <a href="#" class="preventDefault"><span class="disclosureTriangle">&#9658; </span>Test tone</a>
     </div>
-    <!-- test tone currently broken, so hiding for now -->
-    <div id="TestToneLabel" class="hiddenContent" style="display:none;">
+    <div id="TestToneLabel" class="hiddenContent">
       <p>The button below will produce a filtered sawtooth wave (a buzzy sound) with the oscillator frequency controlled on the x-axis and filter cutoff frequency controlled on the y-axis. (When you tilt your device to the left, the sound will be lower; when you tip your device upside down, the sound will be more buzzy.)</p>
       <button id="TestToneButton" class="soundOff">test</button>
     </div>
