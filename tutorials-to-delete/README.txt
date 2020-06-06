@@ -1,0 +1,1 @@
+I'm just using this folder to work through new concepts in JavaScript in summer 2020. Feel free to delete.
