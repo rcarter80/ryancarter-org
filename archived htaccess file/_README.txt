@@ -1,0 +1,1 @@
+I'm not sure why I made this .htaccess file, but after upgrading to macOS Big Sur, it starting causing issues when using localhost
