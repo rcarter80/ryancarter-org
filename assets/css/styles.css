@@ -755,6 +755,10 @@
     -moz-transition: box-shadow 0.75s;
     transition: box-shadow 0.75s;
   }
+  /* events canceled due to COVID-19 have slightly darker background */
+  .events_entry_canceled {
+    background-color: #dedee3;
+  }
   /* only use this mouse hover effect on desktop */
   @media (min-device-width: 980px) {
     .events_entry:hover {
@@ -767,6 +771,9 @@
       -webkit-transition: box-shadow 0.5s;
       -moz-transition: box-shadow 0.5s;
       transition: box-shadow 0.5s;
+    }
+    .events_entry_canceled:hover {
+      background-color: #f9f9fa;
     }
   }
 
