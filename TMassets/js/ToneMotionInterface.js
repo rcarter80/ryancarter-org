@@ -68,7 +68,7 @@ function setInstructions(instructions) {
 var TransportButton = document.getElementById("TransportButton");
 // waits until all buffers are loaded
 Tone.Buffer.on('load', function(){
-  // all buffers are loaded. 
+  // all buffers are loaded.
   console.log("All buffers are loaded");
   TransportButton.className = "musicIsReadyToPlay";
   TransportButton.innerHTML = "play";
@@ -84,6 +84,41 @@ Tone.Buffer.on('load', function(){
   }
 })
 TransportButton.onclick = function() {
+  // On device that request motion access permission, must delay playing sound
+  var delayPlayingUntilPermission = false;
+
+  // testing iOS 13 motion permission
+  // Guard against reference erros by checking that DeviceMotionEvent is defined
+  if (typeof DeviceMotionEvent !== 'undefined' &&
+  typeof DeviceMotionEvent.requestPermission === 'function') {
+    // Device requests motion permission (e.g., iOS 13+)
+    delayPlayingUntilPermission = true;
+    DeviceMotionEvent.requestPermission()
+    .then(permissionState => {
+      if (permissionState === 'granted') {
+        window.addEventListener("devicemotion", handleMotionEvent, true);
+      } else {
+        // user has not give permission for motion. Pretend device is laptop
+        ToneMotion.status = "deviceDoesNotReportMotion";
+      }
+      // NOW we can play sound
+      Tone.Transport.start(ToneMotion.delayBeforePlaying);
+    })
+    .catch(console.error);
+  } else {
+    // handle non iOS 13+ devices, which could still report motion
+    console.log('Not an iOS 13+ device');
+    if ('DeviceMotionEvent' in window) {
+      console.log('Device claims DeviceMotionEvent in window');
+      window.addEventListener("devicemotion", handleMotionEvent, true);
+      // But wait! My laptop sometimes says it reports motion but doesn't. Check for that case below.
+      beginMotionDetection();
+    }
+    else {
+      ToneMotion.status = "deviceDoesNotReportMotion";
+    }
+  }
+
   // page loads with #TransportButton set to .resourcesAreLoading
   if (TransportButton.className === "resourcesAreLoading") {
     TransportButton.innerHTML = "Still loading..."
@@ -97,7 +132,10 @@ TransportButton.onclick = function() {
     // user sees accel. data as part of introductory instructions, but those are removed when play starts
     clearInterval(updateIntroStatusLabelIntervId);
     $("#IntroStatusLabel").remove();
-    Tone.Transport.start(ToneMotion.delayBeforePlaying); // configurable delay before starting Transport
+    if (!delayPlayingUntilPermission) {
+      // if device requests motion access permission, DON'T play sound yet
+      Tone.Transport.start(ToneMotion.delayBeforePlaying); // configurable delay before starting Transport
+    }
   }
   else if (TransportButton.className === "musicIsPlaying") {
     TransportButton.className = "userMayStopMusic";
@@ -148,7 +186,7 @@ function musicHasFinishedPlaying() {
 }
 // on iOS, the context will be started on the first valid user action on the #TransportButton element
 // see https://github.com/tambien/StartAudioContext
-// Audio Context could be started with #TransportButton (which plays music) or 
+// Audio Context could be started with #TransportButton (which plays music) or
 StartAudioContext(Tone.context, "#TransportButton").then(function(){
   if (ToneMotion.showStatusLabels) {
     $("#AudioContextStatusLabel").html("AudioContext is started");
@@ -222,7 +260,7 @@ function addXYPadIfNoMotion() {
     Interface.Dragger({
       toneX: ToneMotion.xSig, // the Tone.js object connected to the x-axis
       toneY: ToneMotion.ySig, // the Tone.js object connected to the y-axis
-      name: " ", // this goes on the intersection of the axes but I don't want text there 
+      name: " ", // this goes on the intersection of the axes but I don't want text there
       x: {
         param: "value", // i.e., testSigX.value
         min: 0.0,
@@ -298,7 +336,7 @@ var Interface = {
 
 /**
  *
- *  
+ *
  *  DRAGGER
  *
  */
@@ -309,7 +347,7 @@ Interface.Dragger = function(params){
     if ($("#DragContainer").length === 0){
       $("<div>", {
         "id" : "DragContainer"
-      }).appendTo(params.parent || "#Content"); 
+      }).appendTo(params.parent || "#Content");
     }
 
     this.container = $("#DragContainer");
@@ -419,7 +457,7 @@ Interface.Dragger.prototype._onend = function(e){
 
 /**
  *
- *  
+ *
  *  SLIDER
  *
  */
@@ -513,7 +551,7 @@ Interface.Slider = function(params){
 
       var paramValue = typeof params.value !== "undefined" ? params.value : this.tone.get(this.parameter);
 
-      this.value(paramValue);   
+      this.value(paramValue);
     }
 
   } else {
@@ -542,7 +580,7 @@ Interface.Slider.prototype.value = function(val){
 
   if (this.options){
     this._setParam(this.options[val]);
-  } 
+  }
 };
 
 Interface.Slider.prototype._ondrag = function(e, pointer){
