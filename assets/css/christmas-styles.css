@@ -1,12 +1,75 @@
-div.playing {
-  background-color: green;
+:root {
+  --gold-color: #f0e00a;
+  --silver-color: #393b39;
+  --light-silver-color: #a8a8a2;
+  --green-color: #027302;
 }
+
+html {
+  background-image: url("../img/patternChristmas3.jpg");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Parisienne', serif;
+  font-size: 48px;
+  text-align: center;
+  color: var(--silver-color);
+  margin 20px 0;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--gold-color);
+  box-shadow: 0 0 20px var(--gold-color);
+}
+
+h2 {
+  font-family: 'Cormorant', serif;
+  font-size: 24px;
+  color: var(--silver-color);
+  flex: 2;
+  text-align: center;
+  padding: 0 3px;
+}
+
+/* TODO: write style for mobile */
+
 audio {
-  width: 500px;
-  height: 50px;
-  display: block;
+  flex: 3;
+}
+
+section {
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--gold-color);
+  border-radius: 10px;
+  box-shadow: 0 0 20px var(--gold-color);
+}
+
+article {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--light-silver-color);
+}
+article:last-of-type {
+  border-bottom: none;
+}
+article:hover {
+  background-color: rgba(240, 224, 10, 0.35);
+  box-shadow: 0 0 5px var(--gold-color);
+}
+article.playing, article.playing:hover {
+  background-color: rgba(2, 115, 2, 0.35);
+  box-shadow: 0 0 5px var(--green-color);
+}
+
+
+audio {
+  padding: 10px;
 }
 audio:focus {
   outline: none;
