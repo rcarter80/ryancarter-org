@@ -35,7 +35,8 @@ h2 {
   font-size: 20px;
   flex: 2;
   text-align: center;
-  padding: 0 3px;
+  margin: 0;
+  padding: 0 5px;
 }
 
 p {
@@ -52,14 +53,9 @@ header {
   box-shadow: 0 0 20px var(--gold-color);
 }
 
-/* TODO: finish responsive site */
-@media (max-width: 767px) {
-  article {
-    background-color: blue;
-  }
-}
-
 audio {
+  margin: 0;
+  padding: 0;
   flex: 3;
 }
 
@@ -87,6 +83,23 @@ article:hover {
 article.playing, article.playing:hover {
   background-color: rgba(2, 115, 2, 0.5);
   box-shadow: 0 0 5px var(--green-color);
+}
+
+@media (max-width: 767px) {
+  h2 {
+    padding-top: 10px;
+  }
+  audio {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+  }
+  section {
+    border-radius: 0;
+  }
+  article {
+    display: block;
+  }
 }
 
 
