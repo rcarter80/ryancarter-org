@@ -65,6 +65,5 @@ typings/
 *.DS_Store
 
 # folders not needed under source control
-/audio/*
 /deprecated/*
 /documents/*
