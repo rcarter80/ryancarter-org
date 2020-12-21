@@ -48,9 +48,11 @@ p {
 header {
   margin: 30px 0;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--light-silver-color);
   box-shadow: 0 0 20px var(--gold-color);
+  /* TODO: decide on background color versus texture */
+  background-color: rgba(255, 255, 255, 0.9);
+  background-image: url("../img/silver-texture.jpg");
 }
 
 audio {
