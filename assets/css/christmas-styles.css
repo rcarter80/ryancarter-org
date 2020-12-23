@@ -6,14 +6,10 @@
 }
 
 html {
+  background-color: red;
   background-image: url("../img/patternChristmas3.jpg");
-  /* shouldn't need vendor prefixes? */
-  /* -webkit-animation: animatedBackground 30s linear infinite normal;
-  -moz-animation: animatedBackground 30s linear infinite normal; */
   animation: animatedBackground 30s linear infinite normal;
 }
-/* @-webkit-keyframes animatedBackground { to { background-position: 0 300px; } }
-@-moz-keyframes animatedBackground { to { background-position: 0 300px; } } */
 @keyframes animatedBackground { to { background-position: 0 300px; } }
 
 body {
@@ -46,13 +42,22 @@ p {
   font-weight: bold;
 }
 
+a {
+  color: var(--green-color);
+}
+a:link, a:visited {
+  text-decoration: none;
+}
+a:hover, a:active {
+  text-decoration: underline;
+}
+
 header {
   margin: 30px 0;
   text-align: center;
   border: 1px solid var(--light-silver-color);
   box-shadow: 0 0 20px var(--gold-color);
-  /* TODO: decide on background color versus texture */
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: silver;
   background-image: url("../img/silver-texture.jpg");
 }
 
@@ -88,11 +93,9 @@ article:last-of-type {
 }
 article:hover {
   background-color: rgba(240, 224, 10, 0.35);
-  /* box-shadow: 0 0 5px var(--gold-color); */
 }
 article.playing, article.playing:hover {
   background-color: rgba(2, 115, 2, 0.5);
-  /* box-shadow: 0 0 5px var(--green-color); */
 }
 
 @media (max-width: 767px) {
