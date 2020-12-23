@@ -30,3 +30,15 @@ for (let i = 0; i < audioFiles.length; i++) {
     e.target.parentElement.classList.remove('playing');
   };
 }
+
+// allow user to play song by clicking on title
+const songTitles = document.querySelectorAll('h2');
+for (let i = 0; i < songTitles.length; i++) {
+  songTitles[i].onclick = (e) => {
+    if (e.target.nextElementSibling.paused) {
+      e.target.nextElementSibling.play();
+    } else {
+      e.target.nextElementSibling.pause();
+    }
+  }
+}
