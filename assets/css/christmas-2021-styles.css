@@ -1,5 +1,6 @@
 :root {
   /* --gold-color: #f0e00a; */
+  /* HACK: last year used a gold theme color and I replaced it with white */
   --gold-color: white;
   --silver-color: #393b39;
   --light-silver-color: #a8a8a2;
@@ -7,9 +8,9 @@
 }
 
 html {
-  background-color: red;
+  background-color: whited;
   background-image: url("../img/blue-snowflake-cropped.jpg");
-  animation: animatedBackground 30s linear infinite normal;
+  animation: animatedBackground 60s linear infinite normal;
 }
 @keyframes animatedBackground { to { background-position: 0 300px; } }
 
@@ -93,7 +94,8 @@ article:last-of-type {
   border-radius: 0 0 10px 10px;
 }
 article:hover {
-  background-color: rgba(240, 224, 10, 0.35);
+  /* background-color: rgba(240, 224, 10, 0.35); */
+  background-color: rgba(0, 0, 0, 0.1);
 }
 article.playing, article.playing:hover {
   background-color: rgba(2, 115, 2, 0.5);
@@ -149,7 +151,8 @@ img:nth-child(odd) {
   box-shadow: 0 0 5px var(--green-color);
 }
 img:nth-child(even) {
-  box-shadow: 0 0 5px red;
+  /* last year this was red */
+  box-shadow: 0 0 5px var(--green-color);
 }
 img.portrait {
   width: 225px;
