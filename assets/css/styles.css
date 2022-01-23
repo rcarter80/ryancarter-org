@@ -982,6 +982,12 @@
   #score_clock:hover {
     background: url("../img/clock-thumbnail_hover.png");
   }
+  #score_motion {
+    background: url("../img/motion-thumbnail.png");
+  }
+  #score_motion:hover {
+    background: url("../img/motion-thumbnail_hover.png");
+  }
   #score_limits {
     background: url("../img/limits-thumbnail.png");
   }
