@@ -439,6 +439,22 @@
       padding-top: 12px;
     }
   }
+  .borderedSection {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #b2b7b6;
+    border-radius: 15px;
+  }
+  div.qr_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  .qr_wrapper img {
+    width: 200px;
+    height: 200px;
+  }
 
   /* -------------------------  FOOTER ------------------------- */
   #tiny_phone_nav {

@@ -37,14 +37,14 @@
     <div id="main_container">
       <div id="banner"><h2>Interactive Works</h2></div>
 
-      <div class="portfolio section clearfix">
+      <div class="portfolio borderedSection clearfix">
         <h3>Instructions</h3>
         <p class="very_dark">Each of the following pieces has a participatory component featuring motion-controlled electronic sound generated on and played from mobile devices. In a concert, the audience is invited to take out their phones and navigate to a website I built, which allows them to control sounds by shaking or tilting their devices. Here's how you can play along with the recordings on this page:</p>
         <p class="very_dark">1. Open this site <a href="https://ryancarter.org/interactive-works.html" target="_blank">(ryancarter.org/interactive-works)</a> on a device that is NOT your phone.</p>
         <p class="very_dark">2. On your phone, open the interactive site listed below that corresponds to the particular piece you're about to play. When the site has finished loading, tap the "complete setup" button.</p>
         <p class="very_dark">3. Practice! (Practicing is optional, but the participatory site that you've loaded on your phone has two practice modes that correspond to the two modes of interactivity in this piece.)</p>
-        <p class="very_dark">4. When you're ready to play, start playing the recording below at exactly the same time that you tap the "start" button on your phone.</p>
-        <div class="section">
+        <p class="very_dark">4. When you're ready to play, start playing the recording below the QR code at exactly the same time that you tap the "start" button on your phone.</p>
+        <div class="borderedSection">
           <div class="displayToggle">
             <a href="#" class="preventDefault block_link"><span class="disclosureTriangle">&#9658; </span>How does it work?</a>
           </div>
@@ -52,16 +52,35 @@
             <!-- TODO: write explanation below -->
             <p>explanation goes here</p>
           </div> <!-- /.hiddenContent -->
-        </div> <!-- /.section -->
+        </div> <!-- /.borderedSection -->
+      </div> <!-- /.portfolio -->
+
+      <div class="portfolio borderedSection clearfix">
+        <h3>Concerto Molto Grosso (for audience and orchestra)</h3>
+        <p><i>Concerto Molto Grosso (for audience and orchestra)</i> was commissioned and recorded by the <a href="https://boisephil.org" target="_blank">Boise Philharmonic</a>.</p>
+        <p class="very_dark">You can access the <a href="https://ryancarter.org/bp3" target="_blank">interactive site</a> by scanning the following QR code on your phone:</p>
+        <div class="qr_wrapper">
+          <img  class="qr-code" src="./assets/img/qr_code-bp3.png" alt="QR code for Boise Phil interactive recording" />
+        </div>
+        <!-- TODO: make sure site as at bp3! not bp2 -->
+        <audio controls="controls">
+          <!-- listing ogg first didn't work in Safari -->
+          <source src="audio/concerto_molto_grosso.mp3">
+            <source src="audio/concerto_molto_grosso.ogg">
+            <!-- error message for old browsers -->
+            <p style="color:red;">Your browser does not support HTML5 audio. Upgrading your browser will give you access to many new features.</p>
+        </audio>
       </div> <!-- /.portfolio -->
 
       <!-- TODO: could change jack site to match same welcome message as hub site AND could change tilt tutorial to one I used for BP -->
 
-      <div class="portfolio section clearfix">
+      <div class="portfolio borderedSection clearfix">
         <h3>Direct Attention</h3>
         <p><i>Direct Attention</i> (for string quartet and phones) was commissioned and recorded by the <a href="https://jackquartet.com" target="_blank">JACK Quartet</a>.</p>
-        <p class="very_dark">The interactive site to open on your phone for this piece is: <a href="https://ryancarter.org/jack2" target="_blank">ryancarter.org/jack2</a></p>
-        <br>
+        <p class="very_dark">You can access the <a href="https://ryancarter.org/jack2" target="_blank">interactive site</a> by scanning the following QR code on your phone:</p>
+        <div class="qr_wrapper">
+          <img  class="qr-code" src="./assets/img/qr_code-jack2.png" alt="QR code for JACK Quartet interactive recording" />
+        </div>
         <audio controls="controls">
           <!-- listing ogg first didn't work in Safari -->
           <source src="audio/direct_attention.mp3">
@@ -69,7 +88,7 @@
             <!-- error message for old browsers -->
             <p style="color:red;">Your browser does not support HTML5 audio. Upgrading your browser will give you access to many new features. In the meantime, click here to download <a href="audio/direct_attention.mp3" target="_blank" style="display:inline;font-size:100%;">Direct Attention</a></p>
         </audio>
-        <div class="section">
+        <div class="borderedSection">
           <div class="displayToggle">
             <a href="#" class="preventDefault block_link"><span class="disclosureTriangle">&#9658; </span>Program notes</a>
           </div>
@@ -78,14 +97,16 @@
             <p><i>Direct Attention</i> is a piece for string quartet and motion-controlled interactive sounds that are played from the mobile devices of the audience. All audience members are invited to participate. You will be able to control certain aspects of the sound by tilting or shaking your device; there is no interaction with the screen other than tapping a “start” button and occasionally glancing to see whether to “tilt” or “shake” your device, though you could also just experiment to find out what moving your device will do. This work seeks to reposition the phone from a tool for remote interaction to a musical instrument that requires no experience to play and supports the communal experience of hearing music in concert.</p>
             <p>The title is a reference to another quote from Lanier (who is well enough established in the field to speak quite candidly): “If ordinary people were to get all happy and satisfied, they might take a moment away from the obsession with social media numbers and go frolic in the flowers or even pay direct attention to each other. But if they’re all on edge about whether they’re popular enough, worried about whether the world is imploding, or furious at morons who are thrust into the middle of their connections with friends and families, then they dare not disengage. They are hooked because of provoked natural vigilance. We in Silicon Valley like to watch the ants dig harder into their dirt. They send us money as we watch.”</p>
           </div> <!-- /.hiddenContent -->
-        </div> <!-- /.section -->
+        </div> <!-- /.borderedSection -->
       </div> <!-- /.portfolio -->
 
-      <div class="portfolio section clearfix">
+      <div class="portfolio borderedSection clearfix">
         <h3>Motion Access</h3>
         <p><i>Motion Access</i> (for quartet and phones) was commissioned and recorded by <a href="https://www.hubnewmusic.org/" target="_blank">Hub New Music</a>.</p>
-        <p class="very_dark">The interactive site to open on your phone for this piece is: <a href="https://ryancarter.org/hub2" target="_blank">ryancarter.org/hub2</a></p>
-        <br>
+        <p class="very_dark">You can access the <a href="https://ryancarter.org/hub2" target="_blank">interactive site</a> by scanning the following QR code on your phone:</p>
+        <div class="qr_wrapper">
+          <img  class="qr-code" src="./assets/img/qr_code-hub2.png" alt="QR code for Hub New Music interactive recording" />
+        </div>
         <audio controls="controls">
           <!-- listing ogg first didn't work in Safari -->
           <source src="audio/motion_access.mp3">
@@ -93,7 +114,7 @@
             <!-- error message for old browsers -->
             <p style="color:red;">Your browser does not support HTML5 audio. Upgrading your browser will give you access to many new features. In the meantime, click here to download <a href="audio/motion_access.mp3" target="_blank" style="display:inline;font-size:100%;">Motion Access</a></p>
         </audio>
-        <div class="section">
+        <div class="borderedSection">
           <div class="displayToggle">
             <a href="#" class="preventDefault block_link"><span class="disclosureTriangle">&#9658; </span>Program notes</a>
           </div>
@@ -103,7 +124,7 @@
             <p>With the release of iOS 12.2, <a href="https://support.apple.com/en-us/HT209599" target="_blank">Apple restricted access to motion sensor data</a> in the mobile version of Safari by adding a privacy setting called “Motion & Orientation Access,” which is off by default. As it turns out, advertisers had begun using this data in an attempt to infer browsing history, which can be used to refine targeted marketing because a visitor to some type of website may be more amenable to a certain kind of advertisement on another website. In an article called <a href="https://dl.acm.org/doi/10.1145/3309074.3309076" target="_blank">“Privacy Implications of Accelerometer Data: A Review of Possible Inferences,”</a> Jacob Leon Kröger, Philip Raschke, and Towhidur Rahman Bhuiyan write “[c]alibration errors in accelerometers, which are caused by imperfections in the manufacturing process, have been found sufficient to uniquely identify their encapsulating device. Such a ‘fingerprint’ can be used, for instance, to track users across repeated website visits, even when private browsing is activated and other tracking technologies, such as canvas fingerprinting or cookies, are blocked.”</p>
             <p>I promise I’m not using your data in any nefarious way (you can <a href="https://github.com/rcarter80/tone-motion/tree/master" target="_blank">see the code here</a>). In fact, I prefer building my own websites from scratch and distributing my work on them to avoid advertising entirely. I’m just trying to make fun interactive music. But art can also exist to push us beyond our comfort zones and to broaden, reorient, and recontextualize our understanding of the rapidly evolving technologies we use so frequently.</p>
           </div> <!-- /.hiddenContent -->
-        </div> <!-- /.section -->
+        </div> <!-- /.borderedSection -->
       </div> <!-- /.portfolio -->
 
       <div id="tiny_phone_nav"> <!-- phone only: in case hidden nav is inaccessible -->
