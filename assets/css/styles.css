@@ -64,6 +64,22 @@
     border-top: 1px solid #b2b7b6;
   }
 
+  table {
+    border: 1px solid #b2b7b6;
+  }
+  thead {
+    background-color: #b2b7b6;
+    color: #fff;
+  }
+  td, th {
+    padding: 5px 20px;
+  }
+  div.table_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   /* -------------------------  GENERAL TEXT STYLES ------------------------- */
   a:link,
   a:visited {
