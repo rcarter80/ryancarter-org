@@ -219,6 +219,7 @@
     z-index: 1000;
     width: 100%;
     border-bottom: 1px solid #b2b7b6; /* keep border for browsers that don't suprt box-shadow */
+    border-top: 1px solid #b2b7b6;
     background: rgb(255, 255, 255); /* fallback for browsers that don't support rbga() */
     background: rgba(255, 255, 255, 0.92);
     box-shadow: 0 1px 4px #000;
