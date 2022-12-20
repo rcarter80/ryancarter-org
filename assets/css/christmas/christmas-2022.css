@@ -58,7 +58,7 @@ header {
   margin: 30px 0;
   text-align: center;
   border: 1px solid var(--light-silver-color);
-  box-shadow: 0 0 20px var(--gold-color);
+  box-shadow: 0 0 8px silver;
   background-color: silver;
   background-image: url("../../img/silver-texture.jpg");
 }
@@ -75,7 +75,7 @@ section {
   background-color: rgba(235, 251, 255, 0.9);
   border: 1px solid var(--light-silver-color);
   border-radius: 10px;
-  box-shadow: 0 0 5px silver;
+  box-shadow: 0 0 8px silver;
 }
 section.center {
   text-align: center;
