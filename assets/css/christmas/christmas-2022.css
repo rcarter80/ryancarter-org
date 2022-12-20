@@ -8,9 +8,11 @@
 }
 
 html {
-  background-color: whited;
+  background-color: white;
   background-image: url("../../img/christmas-2022/wallpaper.png");
-  animation: animatedBackground 60s linear infinite normal;
+}
+html.animated-background {
+  animation: animatedBackground 20s linear infinite normal;
 }
 @keyframes animatedBackground { to { background-position: 0 300px; } }
 
@@ -80,6 +82,14 @@ section {
 section.center {
   text-align: center;
 }
+section.center-wrapper {
+  max-width: 1000px;
+  margin: 30px auto;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+}
 
 article {
   display: flex;
@@ -99,6 +109,20 @@ article:hover {
 }
 article.playing, article.playing:hover {
   background-color: rgba(2, 115, 2, 0.5);
+}
+
+button {
+  min-width: 25%;
+  padding: 5px 20px;
+  font-family: inherit;
+  font-size: 200%;
+  background-color: rgba(235, 251, 255, 0.9);
+  border: 1px solid var(--light-silver-color);
+  border-radius: 10px;
+  box-shadow: 0 0 8px silver;
+}
+button:hover {
+  background-color: rgba(255, 255, 255, 0.95);
 }
 
 @media (max-width: 767px) {

@@ -42,3 +42,16 @@ for (let i = 0; i < songTitles.length; i++) {
     }
   }
 }
+
+// To reduce CPU usage, I removed CSS background animation by default and replaced with a button you can click to start or stop animation
+const html = document.querySelector('html');
+const snowButton = document.querySelector('#snow-button');
+
+snowButton.onclick = () => {
+  html.classList.toggle('animated-background');
+  if (html.classList.contains('animated-background')) {
+    snowButton.textContent = 'Make it stop!';
+  } else {
+    snowButton.textContent = 'Let it snow!';
+  }
+}
