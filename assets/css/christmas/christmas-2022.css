@@ -72,10 +72,10 @@ audio {
 section {
   max-width: 1000px;
   margin: 30px auto;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(235, 251, 255, 0.9);
   border: 1px solid var(--light-silver-color);
   border-radius: 10px;
-  box-shadow: 0 0 20px var(--gold-color);
+  box-shadow: 0 0 5px silver;
 }
 section.center {
   text-align: center;

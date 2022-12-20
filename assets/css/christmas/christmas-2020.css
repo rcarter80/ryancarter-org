@@ -7,7 +7,7 @@
 
 html {
   background-color: red;
-  background-image: url("../img/patternChristmas3.jpg");
+  background-image: url("../../img/patternChristmas3.jpg");
   animation: animatedBackground 30s linear infinite normal;
 }
 @keyframes animatedBackground { to { background-position: 0 300px; } }
@@ -58,7 +58,7 @@ header {
   border: 1px solid var(--light-silver-color);
   box-shadow: 0 0 20px var(--gold-color);
   background-color: silver;
-  background-image: url("../img/silver-texture.jpg");
+  background-image: url("../../img/silver-texture.jpg");
 }
 
 audio {

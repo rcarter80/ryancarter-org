@@ -8,8 +8,8 @@
 }
 
 html {
-  background-color: whited;
-  background-image: url("../img/blue-snowflake-cropped.jpg");
+  background-color: white;
+  background-image: url("../../img/blue-snowflake-cropped.jpg");
   animation: animatedBackground 60s linear infinite normal;
 }
 @keyframes animatedBackground { to { background-position: 0 300px; } }
@@ -60,7 +60,7 @@ header {
   border: 1px solid var(--light-silver-color);
   box-shadow: 0 0 20px var(--gold-color);
   background-color: silver;
-  background-image: url("../img/silver-texture.jpg");
+  background-image: url("../../img/silver-texture.jpg");
 }
 
 audio {
