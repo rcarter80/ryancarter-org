@@ -116,6 +116,7 @@ button {
   padding: 5px 20px;
   font-family: inherit;
   font-size: 200%;
+  color: inherit;
   background-color: rgba(235, 251, 255, 0.9);
   border: 1px solid var(--light-silver-color);
   border-radius: 10px;
