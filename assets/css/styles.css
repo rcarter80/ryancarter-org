@@ -714,14 +714,35 @@ input[type="email"]:focus {
 #mc_embed_signup label.error {display:block; float:none; margin-left:1.05em; padding:.5em 0; width:auto; text-align:left;}
 
 /* -------------------------  LISTEN PAGE ------------------------- */
+img.album_cover {
+  border: 1px solid #b2b7b6;
+}
+img.album_cover:hover {
+  border: 1px solid #368DD9;
+  box-shadow: 0 0 2px #368DD9;
+}
+
+/* COLOR PALETTE
+dark blue: #2026E3 [rgb(32, 38, 227)]
+light blue: #368DD9 [rgb(54, 141, 217)]
+orange: #FFDD80
+very light gray: #f9f9fa
+light gray: #b2b7b6
+medium gray: #8a8f8d
+dark gray: #6a6f6d
+very dark gray: #4a4f4d
+*/
+
+
 /* desktop and tablet */
 @media (min-device-width: 768px) {
   img.album_cover {
-    width: 100px;
-    height: 100px;
+    width: 313px;
+    height: 313px;
   }
 }
 /* phone */
+/* TODO: decide on album cover image size for phone */
 @media (max-device-width: 767px) {
   img.album_cover {
     width: 100px;
