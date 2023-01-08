@@ -714,25 +714,32 @@ input[type="email"]:focus {
 #mc_embed_signup label.error {display:block; float:none; margin-left:1.05em; padding:.5em 0; width:auto; text-align:left;}
 
 /* -------------------------  LISTEN PAGE ------------------------- */
+div.album_info {
+  margin-bottom: 8px;
+  border: 1px solid #b2b7b6;
+  background-color: #f9f9fa;
+}
+div.album_info > p {
+  padding: 10px;
+  background-color: #f9f9fa;
+}
+div.album_info > ol {
+  list-style-position: inside;
+}
 img.album_cover {
+  float: left;
+  margin: 10px;
   border: 1px solid #b2b7b6;
 }
 img.album_cover:hover {
-  border: 1px solid #368DD9;
-  box-shadow: 0 0 2px #368DD9;
+  box-shadow: 0 0 6px #b2b7b6;
 }
-
-/* COLOR PALETTE
-dark blue: #2026E3 [rgb(32, 38, 227)]
-light blue: #368DD9 [rgb(54, 141, 217)]
-orange: #FFDD80
-very light gray: #f9f9fa
-light gray: #b2b7b6
-medium gray: #8a8f8d
-dark gray: #6a6f6d
-very dark gray: #4a4f4d
-*/
-
+p.album_footer {
+  clear: both;
+}
+p.album_footer > a {
+  background-color: #f9f9fa;
+}
 
 /* desktop and tablet */
 @media (min-device-width: 768px) {
