@@ -720,14 +720,15 @@ div.album_info {
   background-color: #f9f9fa;
 }
 div.album_info > p {
-  padding: 10px;
+  padding: 12px 20px;
   background-color: #f9f9fa;
 }
 div.album_info > ol {
+  padding: 0px 20px 12px 20px;
   list-style-position: inside;
 }
 img.album_cover {
-  float: left;
+  float: right;
   margin: 10px;
   border: 1px solid #b2b7b6;
 }
@@ -749,11 +750,10 @@ p.album_footer > a {
   }
 }
 /* phone */
-/* TODO: decide on album cover image size for phone */
 @media (max-device-width: 767px) {
   img.album_cover {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
   }
 }
 
