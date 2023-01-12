@@ -714,18 +714,29 @@ input[type="email"]:focus {
 #mc_embed_signup label.error {display:block; float:none; margin-left:1.05em; padding:.5em 0; width:auto; text-align:left;}
 
 /* -------------------------  LISTEN PAGE ------------------------- */
-div.album_info {
+div.listen_info {
   margin-bottom: 8px;
   border: 1px solid #b2b7b6;
   background-color: #f9f9fa;
 }
-div.album_info > p {
+div.listen_info > h3 {
+  margin: 0;
+  padding: 5px;
+  color: #f9f9fa;
+  background: #6a6f6d;
+  text-align: center;
+  font-size: 125%;
+}
+div.listen_info > p {
   padding: 12px 20px;
   background-color: #f9f9fa;
 }
-div.album_info > ol {
+div.listen_info > ol {
   padding: 0px 20px 12px 20px;
   list-style-position: inside;
+}
+div.listen_info a {
+  background-color: #f9f9fa;
 }
 img.album_cover {
   float: right;
@@ -737,9 +748,6 @@ img.album_cover:hover {
 }
 p.album_footer {
   clear: both;
-}
-p.album_footer > a {
-  background-color: #f9f9fa;
 }
 
 /* desktop and tablet */
