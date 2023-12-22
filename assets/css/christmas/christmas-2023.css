@@ -169,7 +169,7 @@ img {
   padding: 0;
   border: 1px solid var(--light-silver-color);
   border-radius: 10px;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   -ms-interpolation-mode: bicubic;
 }
 img:nth-child(odd) {
