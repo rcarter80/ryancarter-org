@@ -67,3 +67,5 @@ typings/
 # folders not needed under source control
 /deprecated/*
 /documents/*
+audio/frictionless_objects.ogg
+audio/frictionless_objects.mp3
