@@ -1,15 +1,14 @@
 :root {
-  /* --gold-color: #f0e00a; */
-  /* HACK: last year used a gold theme color and I replaced it with white */
-  --gold-color: white;
+  --gold-color: #f0e00a;
   --silver-color: #393b39;
   --light-silver-color: #a8a8a2;
   --green-color: #027302;
+  --red-color: #de190b;
 }
 
 html {
   background-color: white;
-  background-image: url("../../img/christmas-2023/wallpaper.jpg");
+  background-image: url("../../img/christmas-2024/wallpaper.jpg");
 }
 html.animated-background {
   animation: animatedBackground 12s linear infinite normal;
@@ -108,7 +107,7 @@ article:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 article.playing, article.playing:hover {
-  background-color: rgba(2, 115, 2, 0.5);
+  background-color: rgba(240, 224, 10, 0.5);
 }
 
 button {
@@ -123,7 +122,7 @@ button {
   box-shadow: 0 0 8px silver;
 }
 button:hover {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(240, 224, 10, 0.95);
 }
 
 @media (max-width: 767px) {
@@ -173,10 +172,9 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 img:nth-child(odd) {
-  box-shadow: 0 0 5px var(--green-color);
+  box-shadow: 0 0 5px var(--gold-color);
 }
 img:nth-child(even) {
-  /* last year this was red */
   box-shadow: 0 0 5px var(--green-color);
 }
 img.portrait {
