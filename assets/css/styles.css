@@ -981,17 +981,6 @@ img.app_store_badge {
   margin: 10px auto 0 auto;
 }
 
-/* phone */
-@media (max-device-width: 767px) {
-  .demo_video {
-    width: 100%;
-  }
-  .demo_video > iframe {
-    width: auto;
-    height: auto;
-  }
-}
-
 /* -------------------------  PORTFOLIO PAGE ------------------------- */
 .portfolio > h3 {
   margin-bottom: 20px;
