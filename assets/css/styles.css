@@ -968,27 +968,11 @@ blockquote > cite {
 .demo_video {
   margin: 20px auto 10px auto;
 }
-/* desktop and tablet */
-@media (min-device-width: 768px) {
-  .demo_video {
-    width: 854px;
-  }
-  .demo_video > iframe {
-    width: 854px;
-    height: 480px;
-    border: none;
-  }
-}
-/* phone */
-@media (max-device-width: 767px) {
-  .demo_video {
-    width: 427px;
-  }
-  .demo_video > iframe {
-    width: 427px;
-    height: 240px;
-    border: none;
-  }
+.demo_video > iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: none;
 }
 
 img.app_store_badge {
