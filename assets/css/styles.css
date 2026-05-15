@@ -971,22 +971,22 @@ blockquote > cite {
 /* desktop and tablet */
 @media (min-device-width: 768px) {
   .demo_video {
-    width: 560px;
+    width: 854px;
   }
   .demo_video > iframe {
-    width: 560px;
-    height: 315px;
+    width: 854px;
+    height: 480px;
     border: none;
   }
 }
 /* phone */
 @media (max-device-width: 767px) {
   .demo_video {
-    width: 420px;
+    width: 427px;
   }
   .demo_video > iframe {
-    width: 420px;
-    height: 315px;
+    width: 427px;
+    height: 240px;
     border: none;
   }
 }
